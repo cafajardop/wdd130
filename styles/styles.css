@@ -1,3 +1,15 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+/* Layout & typography */
 nav {
   background-color: steelblue;
   padding: 10px;
@@ -7,6 +19,7 @@ nav a {
   padding: 10px;
   display: block;
 }
+
 h1 {
   color: steelblue;
 }
@@ -17,41 +30,55 @@ main {
   padding: 1em;
 }
 
+/* Profile image in main */
 main img {
   width: 150px;
   height: auto;
   border: 1px solid steelblue;
   padding: 2px;
   box-shadow: 0 0 30px gray;
+  float: right;
+  margin: 0 0 1rem 1rem;
 }
 
-img {
-  width: 150px;
-  height: auto;
-  border: 1px solid black;
-  padding: 2px;
-  box-shadow: 0 0 30px gray;
-}
-
-p {
-  padding: 0;
-}
+/* Aside */
 aside {
+  position: relative;
   width: 20em;
-  margin: 1em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 1em;
-  background-color: #eee;
-  color: #333;
   text-align: center;
+}
+
+aside h2 {
+  position: absolute;
+  top: 47px;
+  left: 150px;
 }
 
 aside img {
   width: 200px;
   height: auto;
 }
+
+/* Text */
+p {
+  margin: 0;
+}
+
+/* Footer */
 footer {
   margin-top: 1em;
   border-top: 1px solid #333;
   text-align: center;
+}
+
+/* Class selectors */
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #eee;
+  color: #000;
+}
+.indent {
+  padding-left: 2rem;
 }
