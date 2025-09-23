@@ -10,11 +10,30 @@ body {
 }
 
 header,
-footer,
-main {
+.grid,
+footer {
   max-width: 840px;
   margin: 0 auto;
 }
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+main {
+  grid-column: 2 / 3;
+  margin: 1rem;
+
+}
+
+aside {
+  width: 20rem;
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
 
 nav {
   background-color: steelblue;
@@ -37,11 +56,6 @@ h1 {
   color: steelblue;
 }
 
-main {
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 main img {
   width: 150px;
   height: auto;
@@ -53,12 +67,17 @@ main img {
 }
 
 .box {
-  /* margin: 1rem; */
+  margin: 1rem;
   border: 1px solid rgba(0, 0, 0, .1);
   padding: 1rem;
   background: #eee;
   color: #000;
 }
+
+.box img {
+  width: 280px;
+}
+
 
 
 .indent {
