@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Carlos Andrés Fajardo" />
+    <meta name="author" content="Carlos Fajardo" />
     <meta name="description"
-        content="Get in touch with Dry Oar Rafting. Find our address, phone, email, and send us a message through our contact form.">
+        content="Get in touch with Rio Suarez Santander. Find our address, phone, email, and send us a message through our contact form.">
     <link rel="stylesheet" href="styles/rafting.css" />
-    <title>Contact Us | Dry Oar Rafting</title>
+    <title>Contact Us | Rio Suarez Santander</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 
     <main>
         <section class="center-title">
-            <h2>Rafting Rio Suarez<br>Santander</h2>
+            <h1>Rafting Rio Suarez<br>Santander</h1>
             <p>+57 311 4418315</p>
             <p><a href="mailto:info@raftingsantander.com">info@raftingsantander.com</a></p>
             <div class="contact-grid">
@@ -36,7 +36,6 @@
                     <div class="map-wrap">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64941871.71675622!2d-151.1798989!3d6.554813300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c7c1928e3d13%3A0x8a2142fff49a1793!2sSu%C3%A1rez%20Rafting!5e0!3m2!1sen!2sco!4v1759364338953!5m2!1sen!2sco"
-                            width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -50,20 +49,26 @@
 
                     <fieldset>
                         <legend>Message Purpose</legend>
-                        <label><input type="radio" name="purpose" value="inquiry" required> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+
+                        <input type="radio" id="purpose-inquiry" name="purpose" value="inquiry" required>
+                        <label for="purpose-inquiry">General Inquiry</label><br>
+
+                        <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+                        <label for="purpose-reservation">Reservation Question</label><br>
+
+                        <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
+                        <label for="purpose-suggestion">Website Suggestion</label>
                     </fieldset>
 
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="4" placeholder="Type your message here"></textarea>
 
-                    <label class="checkline">
-                        <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
-                    </label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
 
                     <button type="submit" class="btn-primary">Get in Touch!</button>
                 </form>
+
             </div>
         </section>
 
