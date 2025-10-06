@@ -8,6 +8,7 @@
     --accent2-color: #e9c46a;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
+    --body-background: #f4f4f2;
 }
 
 * {
@@ -19,13 +20,23 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--body-background);
+    background: linear-gradient(to bottom, #e9f7ef 0%, #ffffff 100%);
 }
 
 header,
 main,
 footer {
-    width: 840px;
+    max-width: 1200px;
     margin: 0 auto;
+    width: 90%;
+}
+
+main {
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding-bottom: 1.5rem;
 }
 
 header {
@@ -100,12 +111,12 @@ h2 {
     right: 5%;
     bottom: 16px;
     margin: 0;
-    background: var(--accent2-color);
+    background: rgba(233, 196, 106, 0.8);
     color: var(--accent1-color);
     border: 1px solid #d7b657;
     border-radius: 8px;
     padding: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
     z-index: 2;
 }
 
@@ -124,6 +135,12 @@ h2 {
     clear: both;
 }
 
+.hero video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 nav,
 p,
 section,
@@ -132,9 +149,15 @@ article {
     padding: 8px;
 }
 
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .socialmedia img {
-    width: 40px;
-    height: auto;
+    width: 32px;
+    height: 32px;
     display: inline-block;
 }
 
@@ -142,6 +165,10 @@ article {
     text-decoration: none;
 }
 
+.socialmedia img:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
 
 .adventures {
     padding-top: 0.5rem;
@@ -184,7 +211,7 @@ article {
     color: var(--black-color);
 }
 
-/*Contact us*/
+/** --- Contact Section --- */
 .center-title {
     text-align: center;
 }
@@ -285,8 +312,7 @@ article {
     }
 }
 
-/* Serve you*/
-
+/** --- Team Section --- */
 .team {
     margin-top: 2rem;
     padding: 1rem;
@@ -316,4 +342,124 @@ article {
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 0.5rem;
+}
+
+/* --- Trips --- */
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin: 16px;
+    padding: 8px;
+}
+
+.trips-grid>h2 {
+    grid-column: 1 / -1;
+    margin-bottom: .25rem;
+}
+
+.trip-card {
+    grid-column: span 4;
+    background: var(--white-color);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+
+.trip-card figure {
+    margin: 0 0 .5rem 0;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.trip-card h3 {
+    margin: .25rem 0 .25rem;
+    color: var(--primary-color);
+}
+
+.trip-card ul {
+    margin-left: 1.1rem;
+}
+
+/** --- Trips Table --- */
+.table-wrap {
+    overflow-x: auto;
+    margin: 16px;
+    padding: 0 8px;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white-color);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.trips-table caption {
+    text-align: left;
+    padding: .5rem .75rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.trips-table th,
+.trips-table td {
+    padding: .6rem .75rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    color: var(--accent1-color);
+}
+
+.trips-table thead th {
+    background: rgba(31, 111, 84, .08);
+    /* hint of your primary */
+}
+
+.trips-table tbody tr:hover {
+    background: rgba(233, 196, 106, .12);
+}
+
+.cta-contact {
+    text-align: center;
+}
+
+.cta-contact p {
+    margin: .25rem 0 .75rem;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--accent1-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+footer a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
 }
